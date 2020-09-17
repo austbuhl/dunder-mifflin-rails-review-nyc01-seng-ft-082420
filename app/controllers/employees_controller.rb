@@ -20,7 +20,7 @@ class EmployeesController < ApplicationController
         if titles.include?(params[:employee][:title])
             ## how do we throw an error in browser?
             render "error"
-        else 
+        else
             @employee = Employee.create(employee_params(:first_name, :last_name, :alias, :title, :office, :img_url, :dog_id))
             redirect_to employee_path(@employee)
         end
@@ -31,7 +31,8 @@ class EmployeesController < ApplicationController
     end
 
     def update
-        @employee = Employee.update(employee_params( :alias, :title, :office, :img_url, :dog_id))
+        @employee = Employee.find(params[:id])
+        @employee.update(employee_params( :alias, :title, :office, :img_url, :dog_id))
         redirect_to employee_path(@employee)
     end
 
