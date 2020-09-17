@@ -1,0 +1,13 @@
+<h1>Dog Show Page</h1>
+
+<h3><%= @dog.name %></h3>
+<p><%= @dog.breed %></p>
+<p><%= @dog.age %></p>
+
+<h3>Dunder Mifflin Employees</h3>
+
+<ul>
+    <% @dog.employees.each do |employee| %>
+        <li><%= employee.name %></li>
+    <% end%>
+</ul>

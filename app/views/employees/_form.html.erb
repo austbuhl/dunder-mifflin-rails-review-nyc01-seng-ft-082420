@@ -1,0 +1,23 @@
+
+<%= form_for @employee do |f| %>
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %><br>
+    
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %><br>
+    
+    <%= f.label :alias %>
+    <%= f.text_field :alias %><br>
+    
+    <%= f.label :title %>
+    <%= f.text_field :title, uniqueness: true %><br>
+    
+    <%= f.label :office %>
+    <%= f.text_field :office %><br>
+    
+    <%= f.label :dog_id %>
+    <%= f.collection_select :dog_id, Dog.all, :id, :name %><br>
+
+    <%= f.submit %>
+<% end %>
+    

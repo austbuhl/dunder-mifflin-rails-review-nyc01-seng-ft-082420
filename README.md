@@ -17,3 +17,11 @@ As a user, I should be able to create AND edit an Employee, and only be able to 
 No one at Dunder Mifflin can have the same alias and/or job title (Dwight made up that rule!)
 
 BONUS: Make an option to sort the dogs on the index page by the number of employees that belong to them.
+
+
+
+Employee belongs to DOg
+Dog has many employees
+
+Dog #index, show
+Employee #index, show, create, new, edit, update
